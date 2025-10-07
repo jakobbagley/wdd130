@@ -31,4 +31,18 @@ footer p {
 footer p a:hover {
     text-decoration: underline;
 }    
-      
+/* 2) Center the headings inside #hero-msg */
+#hero-msg h1,
+#hero-msg h4 {
+  text-align: center;
+}
+
+/* 3) Center inline content (like a button) inside .button-box */
+.button-box {
+  text-align: center;
+}
+
+/* 4) Center text inside every section that's inside main */
+main section {
+  text-align: center;
+}     
