@@ -1,48 +1,99 @@
+/* sets max width of the page and centers it */
 div {
   max-width: 1600px;
-  margin: 0 auto; /* centers the page */
- }
+  margin: 0 auto; 
+}
+
+/* centers the text inside div.a */
  div.a {
   text-align: center;
 }
+
+/* sets the height of the background */
 #background {
+    background-color: #778da9;
     height: 725px;
 }
+
+/* sets the background color of the body */
 body {
     background-color: #e0e1dd; 
 }
+
+/* styles the header */
 header {
     background-color: #778da9;
 }
-nav a:hover {
-    background-color: #1b263b;
+
+/* styles the footer */
+footer {
+    background-color: #415a77;
 }
+
+/* styles the icons */
 .icon {
     width: 80px;
 }
+
+/* styles the navigation links */
 nav a {
     text-align: center;
     color: #fcfbfb;
     text-decoration: none;
 }    
+
+/* styles the navigation links on hover */
+nav a:hover {
+    background-color: #1b263b;
+}
+
+/* styles the footer text */
 footer p {
     font-size: 1.2em;
 }    
+
+/* styles the footer links */
+footer p a {
+    color: #fcfbfb;
+    text-decoration: none;
+}
+
+/* styles the footer links on hover */
 footer p a:hover {
     text-decoration: underline;
 }    
-/* 2) Center the headings inside #hero-msg */
+
+/* Center the headings inside #hero-msg */
 #hero-msg h1,
 #hero-msg h4 {
   text-align: center;
 }
 
-/* 3) Center inline content (like a button) inside .button-box */
+/* Center inline content (like a button) inside .button-box */
 .button-box {
   text-align: center;
 }
 
-/* 4) Center text inside every section that's inside main */
+/* Center text inside every section that's inside main */
 main section {
   text-align: center;
-}     
+} 
+
+
+.book {
+    background-color: #778da9;
+}
+
+.book:hover {
+    background-color: #778da9;
+}   
+.join {
+    background-color: #778da9;
+}
+
+.join:hover {
+    background-color: #778da9;
+}
+.msg {
+    background-color: #778da9;
+}
