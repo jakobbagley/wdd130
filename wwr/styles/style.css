@@ -1,0 +1,34 @@
+div {
+  max-width: 1600px;
+  margin: 0 auto; /* centers the page */
+ }
+ div.a {
+  text-align: center;
+}
+#background {
+    height: 725px;
+}
+body {
+    background-color: #e0e1dd; 
+}
+header {
+    background-color: #778da9;
+}
+nav a:hover {
+    background-color: #1b263b;
+}
+.icon {
+    width: 80px;
+}
+nav a {
+    text-align: center;
+    color: #fcfbfb;
+    text-decoration: none;
+}    
+footer p {
+    font-size: 1.2em;
+}    
+footer p a:hover {
+    text-decoration: underline;
+}    
+      
