@@ -1,43 +1,36 @@
-.main-para {
-    font-size: 1.5em;
-    line-height: 1.5em;
-}
-#active {
-    background-color: white;
-    color: steelblue;
-}
-img {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-}
-p {
-    width: 80%;
-}
-a {
-    font-size: 1.5em;
-}
+/* Reset default body margin */
 body {
-    text-align: center;
+    margin: 0
 }
-h1 {
-    text-align: center;
-}
-nav, footer {
+/* General footer styling */
+footer {
     background-color: steelblue;
     color: white;
-    padding: 10px;
 }
-main p {
-    width: 80%;
-    margin: 50px auto;
-    text-align: center;
-}
+
+/* Footer paragraph styling */
 footer p {
-    font-size: 20px;
-    margin: 20px auto;
+    padding: 25px;
 }
-a:hover {
-    background-color: white;
-    color: steelblue;
+
+/* Header margin adjustment */
+h1 {
+    margin: 50px 0;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: steelblue;
+}
+a {
+    color: white;
+}
+nav {
+    padding: 25px;
+}
+a {
+    padding: 25px;
+}
+img {
+    border: 4px solid steelblue;
 }
