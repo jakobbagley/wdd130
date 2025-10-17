@@ -1,0 +1,45 @@
+/* General page styling */
+body {
+    background-color: #666;
+    margin: 0;
+}
+
+/* Title image */
+.title-image {
+    background-color: #666;
+    background-image: url('images/title_image_with_circles.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* icon container */
+.icon-container {
+    width: 300px; 
+    height: 150px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 0;
+    background-color: #666;
+}
+
+/* Circle image containers */
+.icon {
+    width: 500px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid #444;
+    background-color: white;
+}
+
+.icon img {
+    width: 25%;
+    height: 25%;
+    object-fit: scale-down;
+}
