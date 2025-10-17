@@ -1,7 +1,9 @@
-/* style.css */
+/* Make color cover full viewport edges */
+html, body { height: 100%; margin: 0; }
+
 body {
-    margin: 0;
-    background-color: #666;
+  background-color: #666; /* pick any hex/rgb/hsl */
+  color: white;              /* optional: better contrast */
 }
 
 /* Title image */
@@ -17,12 +19,12 @@ body {
     
 }
 
-.circle {
+.circles {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    display: inline-block;
+    display:inline-block;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
