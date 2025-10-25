@@ -128,7 +128,7 @@
   background-color: blue; 
 } 
 /* Activity 5 styles */ 
-    .content5 {
+.content5 {
     /* This is the parent of the activity 5 boxes. */
     }
 
@@ -159,7 +159,7 @@
     background-color: blue; 
      } 
 /* Activity 6 styles */ 
-     .content6 {
+.content6 {
       display:grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
