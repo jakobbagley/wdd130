@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>W09 – ICE Card</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #1f1f1f;            /* page background */
+    --card-bg: #ffffff;       /* main card background */
+    --muted: #8b8e98;         /* paragraph color */
+    --accent: #2f4a6a;        /* bottom strip color */
+    --link: #2b5fad;          /* “3 weeks ago” color */
+  }
+
+  /* Page */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body{
+    margin:0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    display: grid;
+    place-items: start center;
+    padding: 2rem 1rem;
+  }
+
+  /* Card */
+  .card{
+    width: min(90vw, 520px);
+    border-radius: 22px;
+    background: var(--card-bg);
+    overflow: hidden;             /* lets the image follow the rounded corners */
+    box-shadow: 0 14px 40px rgba(0,0,0,.35);
+    color: #111;
+  }
+
+  .card__img{
+    width: 100%;
+    display:block;
+    height: 230px;
+    object-fit: cover;
+    /* optional: use your own image path */
+    /* background-image: url("city.jpg"); */
+  }
+
+  .card__body{
+    padding: 2.25rem 2rem 2rem;
+    text-align: center;
+  }
+
+  .card__meta{
+    font-size: .95rem;
+    font-weight: 600;
+    color: var(--link);
+    margin-bottom: .6rem;
+  }
+
+  .card__title{
+    font-family: "Merriweather", Georgia, "Times New Roman", serif;
+    font-weight: 900;
+    font-size: clamp(1.85rem, 3.2vw, 2.4rem);
+    line-height: 1.1;
+    margin: .25rem 0 1.25rem;
+  }
+
+  .card__text{
+    color: var(--muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    max-width: 36ch;
+    margin: 0 auto;
+  }
+
+  /* Bottom stats (Grid) */
+  .card__stats{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--accent);
+    color: #e7edf7;
+    text-align: center;
+  }
+
+  .stat{
+    padding: 1.35rem 0 1.15rem;
+    border-right: 1px solid rgba(255,255,255,.15);
+  }
+  .stat:last-child{ border-right: none; }
+
+  .stat__value{
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 1;
+    margin-bottom: .35rem;
+  }
+
+  .stat__label{
+    font-size: .85rem;
+    letter-spacing: .04em;
+  }
+
+  /* Tiny touch for rounded bottom like the mock */
+  .card__footer{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+</style>
+</head>
+<body>
+
+  <article class="card">
+    <!-- Use your image; the sample below points to the provided cityscape -->
+    <img class="card__img" src="images/w09_ice_img.jpg" alt="City Scape" />
+    <div class="card__body">
+      <div class="card__meta">3 weeks ago</div>
+      <h1 class="card__title">Post Three</h1>
+      <p class="card__text">
+        This would be some text to go here and tell you about this awesome article that they should definitely read.
+        This would be some text to go here and tell you about this awesome article that they should definitely read.
+        This would be some text to go here.
+      </p>
+    </div>
+
+    <div class="card__stats card__footer">
+      <div class="stat">
+        <div class="stat__value">5<sup>m</sup></div>
+        <div class="stat__label">READ</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">2031</div>
+        <div class="stat__label">VIEWS</div>
+      </div>
+      <div class="stat">
+        <div class="stat__value">15</div>
+        <div class="stat__label">COMMENTS</div>
+      </div>
+    </div>
+  </article>
+
+</body>
+</html>
