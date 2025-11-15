@@ -3,9 +3,14 @@
 /* =============== Base / Reset =============== */
 *,
 *::before,
-*::after { box-sizing: border-box; }
+*::after {
+  box-sizing: border-box;
+}
 
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
 
 body {
   margin: 0;
@@ -13,37 +18,71 @@ body {
   font-family: 'PT Sans', sans-serif;
   font-size: 22px;
   line-height: 1.5;
-  color: #000; /* default text color */
+  color: #000;
 }
 
-/* =============== Layout =============== */
+/* =============== Layout Wrapper =============== */
 #content {
   max-width: 1600px;
   margin: 0 auto;
 }
 
+/* =============== Header & Nav =============== */
 header {
   display: grid;
   grid-template-columns: 150px auto;
-    ;
+  align-items: center;
+  background-color: #1b263b;
 }
 
-main {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+#logo_link {
+  padding-top: 5px;
+  justify-self: center;
+  align-self: center;
 }
 
-/* Hero */
+.logo {
+  height: 150px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between; /* spreads them evenly */
+  align-items: center;
+  width: 100%; /* makes nav fill its grid cell */
+}
+
+nav a {
+  flex: 1; /* makes each link equal width */
+  text-align: center; /* centers each link’s text */
+  padding: 35px 0; /* equal vertical spacing */
+  color: #fcfbfb;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background-color: #415a77;
+}
+
+/* =============== Hero =============== */
 #hero {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
-  margin-top: -100px;
+  margin-top: -100px; /* pulls image up behind header */
 }
 
 #hero-box {
   grid-column: 1 / 4;
   grid-row: 1 / 3;
   z-index: -1;
+}
+
+#hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 #hero-msg {
@@ -53,10 +92,55 @@ main {
   text-align: center;
 }
 
-#hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
+#hero-msg h1,
+#hero-msg h4 {
+  font-family: 'Frijole', cursive, 'PT Sans', sans-serif;
+  color: #ffffff;
+  margin: 0.25rem 0;
+}
+
+/* =============== Typography =============== */
+.home-title,
+.home-title2 {
+  font-family: 'Frijole', cursive, 'PT Sans', sans-serif;
+  font-size: 2em;
+  color: #1b263b;
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* =============== Buttons =============== */
+.button-box {
+  text-align: center;
+}
+
+.book,
+.join {
+  display: inline-block;
+  background-color: #1b263b;
+  color: #fcfbfb;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 20px 0 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.book:hover {
+  background-color: #566d86;
+}
+
+.join:hover {
+  background-color: #fcfbfb;
+  color: #000;
+}
+
+/* =============== Home Grid =============== */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 20px;
 }
 
 /* Background panel behind cards/content */
@@ -65,73 +149,13 @@ main {
   grid-row: 4 / 9;
   background-color: #1b263b;
   height: 725px;
-  margin-bottom: 2rem; /* adjust as needed */
 }
 
-/* =============== Navigation =============== */
-nav {
-  display: flex;
-  justify-content: space-around;
+/* Cards / imagery */
+.icon {
+  width: 80px;
+  height: 80px;
 }
-
-nav a {
-  display: inline-block;
-  text-align: center;
-  color: #fcfbfb;
-  text-decoration: none;
-  padding: 35px;
-}
-
-nav a:hover,
-nav a:focus-visible {
-  background-color: #1b263b;
-}
-
-/* =============== Footer =============== */
-footer {
-  background-color: #415a77;
-  color: #fcfbfb;
-  text-align: left;
-  padding: 25px 50px;
-  margin-top: 200px;
-  display: flex;
-  justify-content: space-around; /* fixed typo */
-  align-items: center;
-}
-
-footer p { font-size: 1.2em; margin: .5rem 0; }
-footer p a { color: #fcfbfb; text-decoration: none; }
-footer p a:hover { text-decoration: underline; }
-
-/* =============== Utilities / Helpers =============== */
-#logo_link {
-  padding-top: 5px;
-  justify-self: center;
-  align-self: center;
-}
-
-.button-box,
-main section { text-align: center; }
-
-/* =============== Typography =============== */
-.home-title {
-  font-family: 'Frijole', cursive, 'PT Sans', sans-serif;
-  font-size: 2em;
-  color: #1b263b;
-  text-align: center;
-  margin: 10px 0 20px;
-}
-
-/* Hero headings (scoped) */
-#hero-msg h1,
-#hero-msg h4 {
-  font-family: 'Frijole', cursive, 'PT Sans', sans-serif; /* fixed FPT→PT */
-  color: #fff;
-  margin: .25rem 0;
-}
-
-/* =============== Cards / Imagery =============== */
-.icon { width: 80px; height: 80px; }
 
 .card-img,
 .mountains {
@@ -141,19 +165,33 @@ main section { text-align: center; }
 }
 
 .card-img {
-  border: 10px solid #1b263b; /* unified border color */
-  transition: transform .5s, opacity .5s;
+  border: 10px solid #1b263b;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
 .card-img:hover {
-  opacity: .6;
+  opacity: 0.6;
   transform: scale(1.1);
 }
 
-/* Specific grid placements for cards */
-.rivers-card { grid-column: 2 / 4; grid-row: 2 / 3; }
-.camping-card { grid-column: 5 / 7; grid-row: 2 / 3; }
-.rapids-card { grid-column: 8 / 10; grid-row: 2 / 3; }
+/* Card placement */
+.rivers-card {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+  text-align: center;
+}
+
+.camping-card {
+  grid-column: 5 / 7;
+  grid-row: 2 / 3;
+  text-align: center;
+}
+
+.rapids-card {
+  grid-column: 8 / 10;
+  grid-row: 2 / 3;
+  text-align: center;
+}
 
 /* Mountains image placement */
 .mountains {
@@ -176,36 +214,95 @@ main section { text-align: center; }
   margin: 1rem 0;
 }
 
-/* Buttons */
-.book,
-.join {
-  display: inline-block;
-  background-color: #1b263b;
-  color: #fcfbfb;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px 20px;
-  margin: 20px 0 10px;
-  border-radius: 5px;
-  transition: background-color .2s ease, color .2s ease;
+/* =============== Rivers Page Layout =============== */
+.main-section-page2 {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
 }
 
-.book:hover { background-color: #566d86; }
-.join:hover { background-color: #fcfbfb; color: #000; }
+.adventure {
+  background-color: #566d86;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 40px;
+  row-gap: 20px;
+  align-items: start;
+  padding: 20px;
+  border-radius: 10px;
+}
 
-/* Logo */
-.logo {
-  height: 150px;
-  width: auto;
+.adventure-image img {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #ddd;
+}
+
+.adventure-image figcaption {
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #f5f5f5;
+}
+
+.adventure-text {
+  color: #ffffff;
+}
+
+.adventure-text p {
+  margin-top: 0;
+}
+
+.adventure .button-box {
+  grid-column: 1 / -1; /* button centered across both columns */
+}
+
+/* =============== Footer =============== */
+footer {
+  background-color: #415a77;
+  color: #fcfbfb;
+  text-align: left;
+  padding: 25px 50px;
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+
+footer p {
+  font-size: 1.2em;
+  margin: 0.5rem 0;
+}
+
+footer p a {
+  color: #fcfbfb;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
 }
 
 /* Ensure images inside sections don’t overflow borders */
-main section img { box-sizing: border-box; }
+main section img {
+  box-sizing: border-box;
+}
 
 /* =============== Responsive =============== */
 @media (max-width: 900px) {
   #hero,
-  .home-grid { /* keep .home-grid for compatibility if present */
+  .home-grid {
     display: block;
     height: auto;
   }
@@ -221,12 +318,22 @@ main section img { box-sizing: border-box; }
   }
 
   #hero,
-  #hero-msg { margin-top: 0; }
+  #hero-msg {
+    margin-top: 0;
+  }
 
-  #hero-msg h4 { display: none; }
-  #hero-msg h1 { color: #6f7364; }
+  #hero-msg h4 {
+    display: none;
+  }
 
-  .home-title { font-size: 25px; }
+  #hero-msg h1 {
+    color: #6f7364;
+  }
+
+  .home-title,
+  .home-title2 {
+    font-size: 25px;
+  }
 
   .rivers-card,
   .camping-card,
@@ -235,15 +342,25 @@ main section img { box-sizing: border-box; }
     width: 60%;
   }
 
-  #background { display: none; }
+  #background {
+    display: none;
+  }
 
   .mountains,
   .msg {
     width: 80%;
-    margin: 0 auto;
-    grid-column: auto;
-    grid-row: auto;
+    margin: 0 auto 2rem;
   }
 
-  footer { margin-top: 25px; }
+  .main-section-page2 {
+    margin-top: 20px;
+  }
+
+  .adventure {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    margin-top: 25px;
+  }
 }
