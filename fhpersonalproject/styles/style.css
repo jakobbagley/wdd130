@@ -9,7 +9,7 @@ body {
   margin: 0;
   font-family: "Spectral SC", serif;
   background-color: #DDB892;
-  color: #7F5539;
+  color: #000000;
   line-height: 1.6;
 }
 
@@ -39,7 +39,7 @@ header {
   text-decoration: none;
   font-family: "Goblin One", cursive;
   font-size: 0.9rem;
-  color: #333;
+  color: #000000;
 }
 
 .site-nav a:hover,
@@ -58,6 +58,7 @@ main {
 .page-title {
   text-align: center;
   font-family: "Goblin One", cursive;
+  color: #000000;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -166,8 +167,9 @@ main {
 /* FOOTER */
 
 footer {
-  border-top: 1px solid #ccc;
-  background-color: #ffffff;
+  border-bottom: 1px solid #7F5539;
+  border-top: 1px solid #7F5539;
+  background-color: #7F5539;
   padding: 1rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
@@ -184,7 +186,7 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
-  color: #333;
+  color: #000;
 }
 
 .footer-nav a:hover,
