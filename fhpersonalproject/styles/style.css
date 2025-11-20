@@ -8,8 +8,8 @@
 body {
   margin: 0;
   font-family: "Spectral SC", serif;
-  background-color: #f5f2eb;
-  color: #333;
+  background-color: #DDB892;
+  color: #7F5539;
   line-height: 1.6;
 }
 
@@ -20,8 +20,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  border-bottom: 1px solid #ccc;
-  background-color: #ffffff;
+  border-bottom: 1px solid #7F5539;
+  background-color: #7F5539;
 }
 
 .logo img {
@@ -150,7 +150,7 @@ main {
   padding: 0.8rem 2.5rem;
   border: none;
   border-radius: 999px;
-  background-color: #333;
+  background-color: #7F5539;
   color: #fff;
   font-family: "Goblin One", cursive;
   font-size: 1rem;
@@ -160,7 +160,7 @@ main {
 
 .contact-button:hover,
 .contact-button:focus {
-  background-color: #555;
+  background-color: #000000;
 }
 
 /* FOOTER */
