@@ -1,0 +1,193 @@
+/* Google Fonts are linked in the HTML files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Spectral SC", serif;
+  background-color: #f5f2eb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER & NAV */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  border-bottom: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  font-family: "Goblin One", cursive;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  text-decoration: underline;
+}
+
+/* PAGE LAYOUT */
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.page-title {
+  text-align: center;
+  font-family: "Goblin One", cursive;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* HOME PAGE LAYOUT */
+
+.home-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  margin-bottom: 2rem;
+}
+
+.photo-card {
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background-color: #d3d3d3; /* placeholder grey like wireframe */
+}
+
+.photo-caption {
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+/* SECTION TEXT */
+
+.section-title {
+  font-family: "Goblin One", cursive;
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+/* TWO-COLUMN LAYOUTS (PAGES 2 & 3) */
+
+.two-column {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* STACKED IMAGE COLUMN – PAGE 2 */
+
+.vertical-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vertical-gallery .photo-card img {
+  max-width: 280px;
+}
+
+/* ROW LAYOUTS – PAGE 3 */
+
+.ancestry-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+@media (max-width: 768px) {
+  .ancestry-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CONTACT BUTTON */
+
+.contact-button {
+  display: inline-block;
+  margin: 3rem auto 0;
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 999px;
+  background-color: #333;
+  color: #fff;
+  font-family: "Goblin One", cursive;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.contact-button:hover,
+.contact-button:focus {
+  background-color: #555;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #ccc;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus {
+  text-decoration: underline;
+}
