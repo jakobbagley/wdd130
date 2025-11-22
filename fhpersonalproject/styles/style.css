@@ -8,7 +8,7 @@
 body {
   margin: 0;
   font-family: "Spectral SC", serif;
-  background-color: #DDB892;
+  background-color: #EDE0D4;
   color: #000000;
   line-height: 1.6;
 }
@@ -20,8 +20,8 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  border-bottom: 1px solid #7F5539;
-  background-color: #7F5539;
+  border-bottom: 1px solid #DDB892;
+  background-color: #DDB892;
 }
 
 .logo img {
@@ -97,6 +97,7 @@ main {
   font-size: 1.4rem;
   text-align: center;
   margin: 2rem 0 1rem;
+  color: #000000;
 }
 
 /* TWO-COLUMN LAYOUTS (PAGES 2 & 3) */
@@ -167,16 +168,16 @@ main {
 /* FOOTER */
 
 footer {
-  border-bottom: 1px solid #7F5539;
-  border-top: 1px solid #7F5539;
-  background-color: #7F5539;
+  border-bottom: 1px solid #DDB892;
+  border-top: 1px solid #DDB892;
+  background-color: #DDB892;
   padding: 1rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 2 rem;
 }
 
 .footer-nav {
@@ -186,6 +187,7 @@ footer {
 
 .footer-nav a {
   text-decoration: none;
+  font-size: 0.9rem;
   color: #000;
 }
 
