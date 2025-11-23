@@ -195,3 +195,11 @@ footer {
 .footer-nav a:focus {
   text-decoration: underline;
 }
+
+.copyright {
+  text-decoration: none;
+  font-family: "Goblin One", cursive;
+  font-size: 0.9rem;
+  color: #000000;
+}
+
