@@ -71,6 +71,7 @@ main {
   gap: 2rem;
   justify-items: center;
   margin-bottom: 2rem;
+  
 }
 
 .photo-card {
@@ -83,6 +84,7 @@ main {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background-color: #d3d3d3; /* placeholder grey like wireframe */
+  border: 5px solid #7F5539;
 }
 
 .photo-caption {
@@ -126,6 +128,8 @@ main {
 
 .vertical-gallery .photo-card img {
   max-width: 280px;
+  height: auto;
+  border: 5px solid #7F5539;
 }
 
 /* ROW LAYOUTS – PAGE 3 */
